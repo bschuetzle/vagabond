@@ -1,0 +1,10 @@
+<%= form_for :location, url: "/locations", method: "post" do |f| %>
+  <%= f.text_field :city %>
+  <%= f.text_field :state %>
+  <%= f.text_field :region %>
+  <%= f.text_field :photo %>
+  <%= f.text_field :lat %>
+  <%= f.text_field :long %>
+
+  <%= f.submit "Edit Location" %>
+<% end %>
