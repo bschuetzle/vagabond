@@ -1,0 +1,8 @@
+<!-- app/views/creatures/new.html.erb -->
+
+<%= form_for :user, url: "/users", method: "post" do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :current_location %>
+  <%= f.text_field :email %>
+  <%= f.submit "Save User" %>
+<% end %>
