@@ -40,6 +40,8 @@ group :development, :test do
   gem 'ffaker'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+  gem 'bootstrap-navbar', '~> 2.5'
 end
 
 group :development do
