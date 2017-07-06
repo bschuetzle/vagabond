@@ -1,8 +1,9 @@
 <!-- app/views/creatures/new.html.erb -->
 
 <%= form_for :user, url: "/users", method: "post" do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :current_location %>
-  <%= f.text_field :email %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :current_location, placeholder: "Current Location" %>
+  <%= f.text_field :email, placeholder: "Email" %>
+  <%= f.password_field :password, placeholder: "Password" %>
   <%= f.submit "Save User" %>
 <% end %>
