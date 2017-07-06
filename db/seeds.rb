@@ -11,7 +11,7 @@ p "Hello from seeds.rb"
 
 User.destroy_all
 
-p "Delete all the things"
+p "Deleting all the Users"
 
 users_data = []
 
@@ -28,9 +28,11 @@ end
 
 User.create(users_data)
 
+p "Created all the Users"
+
 Location.destroy_all
 
-p "Delete all the things"
+p "Deleting all the locations"
 
 locations_data = []
 
@@ -46,3 +48,4 @@ locations_data = []
 end
 
 Location.create(locations_data)
+p "Created all the locations"
