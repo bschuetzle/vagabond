@@ -1,0 +1,8 @@
+<%= @location.city %>
+<%= @location.state %>
+<%= @location.region %>
+<%= @location.photo %>
+<%= @location.lat %>/<%= @location.long %>
+
+<%= button_to "Delete", @location, method: :delete %>
+<%= button_to "Edit", edit_location_path, method: :get %>

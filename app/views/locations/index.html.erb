@@ -1,0 +1,10 @@
+<h1>Vagabond</h1>
+
+<% @locations.each do |location| %>
+<p>City: <%= location.city %></p>
+<p>State: <%= location.state %></p>
+<p>Region: <%= location.region %></p>
+<p>Photo: <%= location.photo %></p>
+<p>Lat/Long: <%= location.lat %> and <%= location.long %></p>
+<br/>
+<% end %>

@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 require 'ffaker'
 
 p "Hello from seeds.rb"
 
 User.destroy_all
+
 p "Delete all the things"
 
 users_data = []
@@ -27,3 +27,22 @@ users_data = []
 end
 
 User.create(users_data)
+
+Location.destroy_all
+
+p "Delete all the things"
+
+locations_data = []
+
+50.times do
+  locations_data << {
+    :city=>FFaker::Address.neighborhood,
+    :state=>FFaker::Address.city,
+    :region=>FFaker::Address.country,
+    :photo => "https://previews.123rf.com/images/hinnamsaisuy/hinnamsaisuy1011/hinnamsaisuy101100055/8190771-garbage-heap-Stock-Photo-garbage-dump.jpg",
+    :lat => 37.7749295,
+    :long => -122.4194155
+  }
+end
+
+Location.create(locations_data)
