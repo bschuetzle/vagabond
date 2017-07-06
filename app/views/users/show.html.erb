@@ -1,0 +1,6 @@
+<%= @user.name %>
+<%= @user.current_location %>
+<%= @user.email %>
+
+<%= button_to "Delete", @user, method: :delete %>
+<%= button_to "Edit", edit_user_path, method: :get %>
