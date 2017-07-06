@@ -6,17 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'ffaker'
+
+p "Hello from seeds.rb"
+
 User.destroy_all
+p "Delete all the things"
 
 users_data = []
 
-users_data <<
-{  :join_date => "5/7/2017",
-      :name => "Chuck Tingle",
-      :current_location => "San Francisco",
-      :profile_pic => "chucktingle@example.com",
-      :email =>"chucktingle@example.com",
-      :password_digest => "asdf"
-    }
+50.times do
+  users_data << {
+    :join_date => Date.today,
+    :name=>FFaker::Name.name,
+    :current_location=>FFaker::Address.city,
+    :profile_pic => "http://longhopes.org/wp-content/uploads/2017/03/Bam-Bam-head.png",
+    :email=>FFaker::Internet.email,
+    :password_digest => "asdf",
+  }
+end
 
-users = User.create(users_data)
+User.create(users_data)
