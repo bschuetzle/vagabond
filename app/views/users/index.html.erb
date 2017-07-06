@@ -1,0 +1,8 @@
+<h1>Vagabond</h1>
+
+<% @users.each do |user| %>
+<p>Name: <%= user.name %></p>
+Email: <%= user.email %>
+Location: <%= user.current_location %>
+<br/>
+<% end %>
