@@ -1,0 +1,7 @@
+<h1>Editin' Vagabond Posts</h1>
+
+<%= form_for :post, url: "/posts", method: "post" do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :body %>
+  <%= f.submit "Edit Post" %>
+<% end %>
