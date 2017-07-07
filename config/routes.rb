@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   root  "homepage#index"
-  resources :sessions
+  get 'login' => 'sessions#new'
+  delete 'logout' => 'sessions#destroy'
+  resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
     resources :posts, only: :show

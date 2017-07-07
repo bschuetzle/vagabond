@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     location_id = params[:location_id]
     location = Location.find_by(id: location_id)
     new_post = Post.new(post_params)
-
+    explode
     if new_post.save
 
       location.posts << new_post
