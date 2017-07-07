@@ -4,14 +4,19 @@ class PostsController < ApplicationController
   end
 
   def new
+    location_id = params[:location_id]
+    @location = Location.find_by(id: location_id)
     @post = Post.new
   end
 
   def create
-    post = Post.new(post_params)
+    location_id = params[:location_id]
+    location = Location.find_by(id: location_id)
+    new_post = Post.new(post_params)
 
-    if post.save
-      redirect_to user_post_path(post)
+    if new_post.save
+      location.posts << new_post
+      redirect_to location_post_path
     else render :new
     end
   end
@@ -23,7 +28,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update_attributes(post_params)
-    redirect_to user_post_path(post)
+    redirect_to user_post_path
   end
 
   def destroy
@@ -42,4 +47,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
+
 end
