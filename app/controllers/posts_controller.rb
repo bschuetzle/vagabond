@@ -15,9 +15,12 @@ class PostsController < ApplicationController
     new_post = Post.new(post_params)
 
     if new_post.save
+
       location.posts << new_post
       redirect_to location_post_path
-    else render :new
+    else
+      explode
+      render :new
     end
   end
 

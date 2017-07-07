@@ -1,6 +1,6 @@
 <h1>Creatin' a Vagabond Post</h1>
 
-<%= form_for :post, url: new_location_post_path, method: "post" do |f| %>
+<%= form_for :post, url: location_posts_path, method: "post" do |f| %>
   <%= f.text_field :title %>
   <%= f.text_field :body %>
   <%= f.submit "Save Post" %>

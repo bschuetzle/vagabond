@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       login(@user)
       redirect_to @user
     else
-      redirect_to session_path
+      redirect_to new_session_path
     end
   end
 
