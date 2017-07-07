@@ -4,22 +4,22 @@ class PostsController < ApplicationController
   end
 
   def new
-    location_id = params[:locations_id]
+    location_id = params[:location_id]
     @location = Location.find_by(id: location_id)
-    @post = Post.new( {locations_id: location_id} )
+    @post = Post.new( {location_id: location_id} )
   end
 
   def create
     location_id = params[:location_id]
     @location = Location.find_by(id: location_id)
     actual_params = post_params
-    actual_params[:locations_id] = location_id
-    actual_params[:users_id] = session[:user_id]
-    new_post = Post.new(actual_params)
+    actual_params[:location_id] = location_id
+    actual_params[:user_id] = session[:user_id]
+    @post = Post.new(actual_params)
+    if @post.save
 
-    if new_post.save
-      location.posts << new_post
-      redirect_to location_post_path(location_id)
+      @location.posts << @post
+      redirect_to location_post_path(location_id, @post)
     else render :new
     end
   end
