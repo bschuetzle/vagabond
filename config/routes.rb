@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
-    resources :posts
+    resources :posts, only: :show
   end
 
   resources :locations do
     resources :posts
   end
+
+  resources :posts, only: :show
 
 end
