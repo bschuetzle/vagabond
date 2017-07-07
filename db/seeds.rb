@@ -49,3 +49,22 @@ end
 
 Location.create(locations_data)
 p "Created all the locations"
+
+Post.destroy_all
+
+p "Deleting all the posts"
+
+posts_data = []
+
+50.times do
+  posts_data << {
+    :title => "asdf",
+    :body => "some other text"
+  }
+end
+
+Post.create(posts_data)
+p "Created all the posts"
+
+# :title => FFaker::HipsterIpsum.sentence,
+# :body => FFaker::HipsterIpsum.paragraph
