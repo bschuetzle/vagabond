@@ -41,7 +41,6 @@ locations_data = []
     :city=>FFaker::Address.neighborhood,
     :state=>FFaker::Address.city,
     :region=>FFaker::Address.country,
-    :photo => "https://previews.123rf.com/images/hinnamsaisuy/hinnamsaisuy1011/hinnamsaisuy101100055/8190771-garbage-heap-Stock-Photo-garbage-dump.jpg",
     :lat => 37.7749295,
     :long => -122.4194155
   }
