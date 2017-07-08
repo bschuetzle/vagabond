@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :posts, dependent: :destroy
-  has_attached_file :photo
+  has_attached_file :photo, styles: { profile: ["100x100#", :jpg] }
   validates_attachment :photo, content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
   def self.confirm(params)
