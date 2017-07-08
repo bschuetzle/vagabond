@@ -4,7 +4,9 @@
 
 <%= @user.current_location %>
 <%= @user.email %>
-<%= link_to image_tag(@user.photo.url(:profile), class: 'media-object'), @user.photo.url, target: '_blank' %>
+<% if @user.photo_file_name != nil %>
+<%= image_tag(@user.photo.url(:profile), class: 'media-object') %>
+<% end %>
 
 <%= button_to "Delete", @user, method: :delete %>
 <%= button_to "Edit", edit_user_path, method: :get %>
