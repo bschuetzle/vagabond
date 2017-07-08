@@ -1,4 +1,4 @@
-<%= form_for :user, url: "/users", method: "post" do |f| %>
+<%= form_for @user do |f| %>
   <%= f.text_field :name %>
   <%= f.text_field :current_location %>
   <%= f.text_field :email %>
