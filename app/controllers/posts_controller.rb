@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    # @posts = Post.all
+    @posts = Post.where(location_id: params[:location_id])
   end
 
   def new
