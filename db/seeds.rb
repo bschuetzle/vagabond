@@ -15,7 +15,7 @@ p "Deleting all the Users"
 
 users_data = []
 
-50.times do
+5.times do
   users_data << {
     :join_date => Date.today,
     :name=>FFaker::Name.name,
@@ -36,7 +36,7 @@ p "Deleting all the locations"
 
 locations_data = []
 
-50.times do
+5.times do
   locations_data << {
     :city=>FFaker::Address.neighborhood,
     :state=>FFaker::Address.city,
@@ -57,8 +57,10 @@ posts_data = []
 
 50.times do
   posts_data << {
-    :title => "asdf",
-    :body => "some other text"
+    :title => FFaker::HipsterIpsum.sentence,
+    :body => FFaker::HipsterIpsum.paragraph,
+    :user_id => rand(User.first.id..User.last.id),
+    :location_id => rand(Location.first.id..Location.last.id)
   }
 end
 
