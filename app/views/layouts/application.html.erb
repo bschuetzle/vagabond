@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vagabond</title>
+<head>
+  <title>Trains and Stuff</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <%= csrf_meta_tags %>
 
-  <body>
-    <%= render 'nav/header' %>
-    <div class="container">
-      <% flash.each do |name, msg| %>
-      <p>
-        <small> <%= name.capitalize %>: <%= msg %> </small>
-      </p>
-      <% end %>
-      
-      <%= yield %>
-    </div>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <%= render 'nav/header' %>
+  <div class="container">
+    <% flash.each do |name, msg| %>
+    <p>
+      <small> <%= name.capitalize %>: <%= msg %> </small>
+    </p>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+</body>
 </html>

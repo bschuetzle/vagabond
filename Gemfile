@@ -42,6 +42,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
   gem 'bootstrap-navbar', '~> 2.5'
+  gem 'jquery-rails'
 end
 
 group :development do

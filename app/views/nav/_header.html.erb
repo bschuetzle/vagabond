@@ -12,18 +12,31 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse change-me">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <ul class="nav navbar-nav navbar-right">
-          <% if current_user %>
-            <li><%= link_to "Whats Up " + current_user.name.split(" ")[0] + "?", user_path(current_user.id) %></li>
+        <% if current_user %>
+        <li><%= link_to "Whats Up " + current_user.name.split(" ")[0] + "?", user_path(current_user.id) %></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle fa fa-train" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "View Cities", locations_path %></li>
+            <li><%= link_to "Something Something", new_user_path %></li>
+            <li role="separator" class="divider"></li>
             <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
-          <% else %>
-            <li><%= link_to "Login", login_path %></li>
-            <li><%= link_to "Sign Up", new_user_path %></li>
-          <% end %>
-        </ul>
+          </ul>
+        </li>
+        <% else %>
+        <li><%= link_to "Login", login_path %></li>
+        <li><%= link_to "Sign Up", new_user_path %></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle fa fa-train" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "View Cities", locations_path %></li>
+            <li><%= link_to "Something Something", new_user_path %></li>
+          </ul>
+        <% end %>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </li>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
 </nav>
