@@ -1,8 +1,9 @@
 <%= @location.city %>
 <%= @location.state %>
 <%= @location.region %>
-<%= @location.photo %>
 <%= @location.lat %>/<%= @location.long %>
-
 <%= button_to "Delete", @location, method: :delete %>
 <%= button_to "Edit", edit_location_path, method: :get %>
+<% if @location.photo_file_name != nil %>
+<%= image_tag(@location.photo.url(:original), class: 'media-object') %>
+<% end %>
