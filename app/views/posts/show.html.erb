@@ -1,7 +1,7 @@
 <h1>Look at this Vagrant Post!</h1>
 
-<%= @post.title %>
-<%= @post.body %>
+<%= @post.title %> <br>
+<%= @post.body %> <br>
 
-<%= button_to "Delete", @post, method: :delete %>
-<%= button_to "Edit", edit_location_post_path, method: :get %>
+<%= button_to "Delete this Post", location_post_path, method: :delete %> <br>
+<%= button_to "Edit this Post", edit_location_post_path, method: :get %>

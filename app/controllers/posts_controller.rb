@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.all
     @posts = Post.where(location_id: params[:location_id])
+    location_id = params[:location_id]
+    @location = Location.find_by(id: location_id)
   end
 
   def new
@@ -30,18 +32,17 @@ class PostsController < ApplicationController
   end
 
   def update
+    location_id = params[:location_id]
     post = Post.find(params[:id])
     post.update_attributes(post_params)
-    explode
-    redirect_to location_post_path(params[:location_id], session[:user_id])
+    redirect_to location_post_path(location_id)
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_to location_post_path
+    redirect_to location_posts_path
   end
-
 
   def show
     @post = Post.find(params[:id])

@@ -1,7 +1,6 @@
-<h1>Edit Your Vagrant Post</h1>
-
-<%= form_for ([@location, @post]) do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :body %>
-  <%= f.submit "Edit Post" %>
+<h1>Edit your Post</h1>
+<%= form_for @post do |f| %>
+  <%= f.text_field :title %> <br>
+  <%= f.text_field :body %> <br>
+  <%= f.submit "Save Changes" %>
 <% end %>
