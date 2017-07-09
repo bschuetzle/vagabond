@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   def index
     # @posts = Post.all
-    @posts = Post.where(location_id: params[:location_id])
     location_id = params[:location_id]
+    @posts = Post.order('id')
     @location = Location.find_by(id: location_id)
   end
 
@@ -14,10 +14,10 @@ class PostsController < ApplicationController
 
   def create
     location_id = params[:location_id]
-    @location = Location.find_by(id: location_id)
     actual_params = post_params
     actual_params[:location_id] = location_id
     actual_params[:user_id] = session[:user_id]
+    @location = Location.find_by(id: location_id)
     @post = Post.new(actual_params)
     if @post.save
 
