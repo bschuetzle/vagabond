@@ -20,15 +20,20 @@
     <h2>Find Skrillex <a href="http://skrillex.com/tour/"> tour dates</a> near your location!!!</h2>
     <h2>Thinking of joining Isis? Watch these <a href="https://www.youtube.com/user/ThinkAgainTurnAway">videos</a> first.</h2>
 
+    <%= content_tag :div, class: "locations_class", data: {locations: @locations} do %>
+    <% end %>
+
     <div id="map"></div>
     <script>
+
+
       function initMap() {
         var bounds = new google.maps.LatLngBounds();
         var infowindow = new google.maps.InfoWindow();
         var map = new google.maps.Map(document.getElementById('map'), {
 
         });
-        var i = 0;
+        var location_data = $('.locations_class').data('locations');
         <% @locations.each do |location| %>
           <% coord = "{lat: #{location.lat}, lng: #{location.long}}" %>
           <% p coord %>
@@ -39,12 +44,16 @@
           bounds.extend(marker.position);
           <% city = "#{location.city}" %>
           <% p city %>
-          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          google.maps.event.addListener(marker, 'click', (function(marker) {
             return function() {
-              infowindow.setContent("hello");
+              <% city = "#{location.city}" %>
+              <% p city %>
+              var info = "<%= "#{location.city}" %>";
+              console.log(info);
+              infowindow.setContent(info);
               infowindow.open(map, marker);
             }
-          })(marker, i));
+          })(marker));
 
         <% end %>
         map.fitBounds(bounds);
