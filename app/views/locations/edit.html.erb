@@ -1,3 +1,5 @@
+<h1>Post a New Location</h1>
+
 <%= form_for @location do |f| %>
   City: <%= f.text_field :city %> <br>
   State: <%= f.text_field :state %> <br>
@@ -5,5 +7,5 @@
   Latitude: <%= f.text_field :lat %> <br>
   Longitude: <%= f.text_field :long %> <br>
   Image: <%= f.file_field :photo %> <br>
-  <%= f.submit "Edit Location" %>
+  <%= f.submit "Save Changes" %>
 <% end %>
