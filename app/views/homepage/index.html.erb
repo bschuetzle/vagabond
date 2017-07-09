@@ -31,9 +31,10 @@
         var i = 0;
         <% @locations.each do |location| %>
           <% coord = {lat: location.lat, lng: location.long} %>
+          <% coord = "{lat: #{location.lat}, lng: #{location.long}}" %>
           <% p coord %>
           var marker = new google.maps.Marker({
-            position: uluru,
+            position: <%= coord %>,
             map: map
           });
         <% end %>
