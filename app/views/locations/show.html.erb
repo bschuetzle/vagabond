@@ -1,11 +1,13 @@
-<h1><%= @location.city %></h1>
-
-City: <%= @location.city %> <br>
-State: <%= @location.state %> <br>
-Region: <%= @location.region %> <br>
+<h1><%= @location.city %>, <%= @location.region %></h1>
 Coordinates: <%= @location.lat %>/<%= @location.long %> <br>
-<%= button_to "Update " + @location.city + "'s Information", edit_location_path, method: :get %> <br>
-<%= button_to "View All Posts ", location_posts_path(:location_id), method: :get %> <br>
 <% if @location.photo_file_name != nil %> <br>
-Location Image: <%= image_tag(@location.photo.url(:original), class: 'media-object') %>
+<%= image_tag(@location.photo.url(:original), class: 'media-object') %>
+<% end %>
+
+<% @posts.each do |p| %>
+<h2><%= p.title %></h2>
+<h3>by <%= p.name %></h3>
+<p><%= p.body %></p>
+<%= link_to "Read full post" , location_post_path(@location, p) %>
+<br/>
 <% end %>
