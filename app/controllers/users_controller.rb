@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     user.update_attributes(user_params)
     redirect_to user_path(user)
   end
-  
+
   def destroy
     user = User.find(params[:id])
     user.destroy
@@ -37,6 +37,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = Post.where(user_id: @user.id)
+    @location_id = params[:location_id]
     render :show
   end
 

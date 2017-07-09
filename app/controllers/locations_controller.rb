@@ -36,6 +36,8 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    @posts = Post.joins(:user).select('posts.*, users.name')
+    explode
     render :show
   end
 
