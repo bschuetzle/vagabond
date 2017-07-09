@@ -35,8 +35,11 @@ class LocationsController < ApplicationController
 
 
   def show
+    location_id = params[:location_id]
     @location = Location.find(params[:id])
-    render :show
+    # @posts = Post.order('id')
+    @posts = Post.joins(:user).select('posts.*, users.name')
+        render :show
   end
 
   private

@@ -27,11 +27,11 @@ class UsersController < ApplicationController
     user.update_attributes(user_params)
     redirect_to user_path(user)
   end
-  
+
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to users_path
+    redirect_to root_path
   end
 
 
