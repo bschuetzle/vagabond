@@ -1,4 +1,38 @@
-<h1>Welcome to Vagrant</h1>
 
-<h2>Find Skrillex <a href="http://skrillex.com/tour/"> tour dates</a> near your location!!!</h2>
-<h2>Thinking of joining Isis? Watch these <a href="https://www.youtube.com/user/ThinkAgainTurnAway">videos</a> first.</h2>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+
+    <h1>Welcome to Vagrant</h1>
+
+    <h2>Find Skrillex <a href="http://skrillex.com/tour/"> tour dates</a> near your location!!!</h2>
+    <h2>Thinking of joining Isis? Watch these <a href="https://www.youtube.com/user/ThinkAgainTurnAway">videos</a> first.</h2>
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWWhvWicgH8LasYYaQ7HCtztjx2g2CjB0&callback=initMap">
+    </script>
+  </body>
+</html>
