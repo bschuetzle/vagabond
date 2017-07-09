@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.all
     @posts = Post.where(location_id: params[:location_id])
+    location_id = params[:location_id]
+    @location = Location.find_by(id: location_id)
   end
 
   def new
