@@ -1,10 +1,11 @@
-<h1>Vagrant Locations</h1>
+<h1>Checkout this shiz</h1>
 
 <% @locations.each do |location| %>
-<p>ID: <%= location.id %></p>
-<p>City: <%= location.city %></p>
-<p>State: <%= location.state %></p>
-<p>Region: <%= location.region %></p>
-<p>Lat/Long: <%= location.lat %> and <%= location.long %></p>
+
+  <h3> <%= link_to(location) do %>
+  <strong><%= location.city %></strong> 
+  <% end %>
+  </h3>
+
 <br/>
 <% end %>
