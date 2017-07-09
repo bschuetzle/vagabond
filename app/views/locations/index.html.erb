@@ -1,11 +1,9 @@
 <h1>Checkout this shiz</h1>
 
 <% @locations.each do |location| %>
-
   <h3> <%= link_to(location) do %>
-  <strong><%= location.city %></strong> 
+  <strong><%= location.city %></strong>
   <% end %>
   </h3>
-
-<br/>
+  <br/>
 <% end %>

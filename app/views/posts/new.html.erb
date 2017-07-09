@@ -1,7 +1,7 @@
 <h1>Create a Vagrant Post</h1>
 
 <%= form_for ([@location, @post]) do |f| %>
-Post Title:  <%= f.text_field :title %>
-Whatcha have to say?  <%= f.text_field :body %>
+Post Title:  <%= f.text_field :title %> <br>
+Whatcha have to say?  <%= f.text_field :body %> <br>
   <%= f.submit "Post that Shiz!" %>
 <% end %>
