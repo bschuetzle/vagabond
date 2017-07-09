@@ -34,17 +34,23 @@ Location.destroy_all
 
 p "Deleting all the locations"
 
-locations_data = []
+# locations_data = []
+#
+# 5.times do
+#   locations_data << {
+#     :city=>FFaker::Address.neighborhood,
+#     :state=>FFaker::Address.city,
+#     :region=>FFaker::Address.country,
+#     :lat => 37.7749295,
+#     :long => -122.4194155
+#   }
+# end
 
-5.times do
-  locations_data << {
-    :city=>FFaker::Address.neighborhood,
-    :state=>FFaker::Address.city,
-    :region=>FFaker::Address.country,
-    :lat => 37.7749295,
-    :long => -122.4194155
-  }
-end
+locations_data = [
+  { city: "San Francisco", state: "California", region: "United States", lat: 37.47, long: -122.25 },
+  { city: "Rio de Janeiro", state: "Rio de Janeiro", region: "Brazil", lat: -22.55, long: -43.12 },
+  { city: "Barcelona", state: "Catalonia", region: "Spain", lat: 41.23, long: 2.11 }
+]
 
 Location.create(locations_data)
 p "Created all the locations"
