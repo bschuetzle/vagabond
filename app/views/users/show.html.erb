@@ -8,5 +8,5 @@
 <%= image_tag(@user.photo.url(:profile), class: 'media-object') %><br>
 <% end %>
 
-<%= button_to "Delete Your Account", @user, method: :delete %><br>
+<%= button_to "Delete Your Account", @user, method: :delete, data: {confirm: 'Are you sure?' } %><br>
 <%= button_to "Edit Your Profile", edit_user_path, method: :get %>
