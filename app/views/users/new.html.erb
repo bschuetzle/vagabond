@@ -1,9 +1,9 @@
-This can probably be deleted
+Fill Out Your Profile
 
 <%= form_for :user, url: "/users", method: "post" do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :current_location, placeholder: "Current Location" %>
-  <%= f.text_field :email, placeholder: "Email" %>
-  <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.text_field :name, placeholder: "Name" %> <br>
+  <%= f.text_field :current_location, placeholder: "Current Location" %> <br>
+  <%= f.text_field :email, placeholder: "Email" %> <br>
+  <%= f.password_field :password, placeholder: "Password" %> <br>
   <%= f.submit "Save User" %>
 <% end %>

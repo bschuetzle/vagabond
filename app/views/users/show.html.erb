@@ -2,11 +2,11 @@
   <h1>Welcome, <%= @user.name %>!</h1>
 </div>
 
-<%= @user.current_location %>
-<%= @user.email %>
-<% if @user.photo_file_name != nil %>
-<%= image_tag(@user.photo.url(:profile), class: 'media-object') %>
+<%= @user.current_location %><br>
+<%= @user.email %><br>
+<% if @user.photo_file_name != nil %><br>
+<%= image_tag(@user.photo.url(:profile), class: 'media-object') %><br>
 <% end %>
 
-<%= button_to "Delete", @user, method: :delete %>
+<%= button_to "Delete", @user, method: :delete %><br>
 <%= button_to "Edit", edit_user_path, method: :get %>
