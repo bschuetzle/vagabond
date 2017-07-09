@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     location_id = params[:location_id]
     post = Post.find(params[:id])
     post.update_attributes(post_params)
-    redirect_to location_post_path(location_id)
+    redirect_to location_post_path
   end
 
   def destroy

@@ -49,7 +49,11 @@ p "Deleting all the locations"
 locations_data = [
   { city: "San Francisco", state: "California", region: "United States", lat: 37.47, long: -122.25 },
   { city: "Rio de Janeiro", state: "Rio de Janeiro", region: "Brazil", lat: -22.55, long: -43.12 },
-  { city: "Barcelona", state: "Catalonia", region: "Spain", lat: 41.23, long: 2.11 }
+  { city: "Barcelona", state: "Catalonia", region: "Spain", lat: 41.23, long: 2.11 },
+  { city: "Marawi City", state: "-", region: "Philipines", lat: 7.9986, long: 124.2928 },
+  { city: "Mosul", state: "-", region: "Iraq", lat: 36.356648, long: 43.164000 },
+  { city: "Raqqa", state: "-", region: "Syria", lat: 35.959411, long: 38.998105 },
+  { city: "Dabiq", state: "-", region: "Syria", lat: 36.536528, long: 37.270459 }
 ]
 
 Location.create(locations_data)
