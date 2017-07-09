@@ -1,11 +1,21 @@
 <h1><%= @location.city %></h1>
 
+<<<<<<< HEAD
 <%= @location.city %> <br>
 <%= @location.state %> <br>
 <%= @location.region %> <br>
 <%= @location.lat %>/<%= @location.long %> <br>
 <%= button_to "Edit", edit_location_path, method: :get %> <br>
 <%= button_to "View All Posts", location_posts_path(:location_id), method: :get %> <br>
+=======
+City: <%= @location.city %> <br>
+State: <%= @location.state %> <br>
+Region: <%= @location.region %> <br>
+Coordinates: <%= @location.lat %>/<%= @location.long %> <br>
+<%= button_to "Delete this Location", @location, method: :delete %> <br>
+<%= button_to "Edit this Location", edit_location_path, method: :get %> <br>
+
+>>>>>>> master
 <% if @location.photo_file_name != nil %> <br>
-<%= image_tag(@location.photo.url(:original), class: 'media-object') %>
+Location Image: <%= image_tag(@location.photo.url(:original), class: 'media-object') %>
 <% end %>
