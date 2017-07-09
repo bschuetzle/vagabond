@@ -10,3 +10,10 @@
 
 <%= button_to "Delete Your Account", @user, method: :delete, data: {confirm: 'Are you sure?' } %><br>
 <%= button_to "Edit Your Profile", edit_user_path, method: :get %>
+
+<h4>User Posts</h4>
+
+<% @posts.each do |post| %>
+  <%= link_to post.title, post_path(post.id) %>
+  <br/>
+<% end %>
