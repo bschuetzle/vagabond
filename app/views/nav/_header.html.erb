@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default hey">
+<nav class="navbar navbar-default navbar-fixed-top hey">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right ">
         <% if current_user %>
-        <li><%= link_to "What's up, " + current_user.name.split(" ")[0] + "?", user_path(current_user.friendly_id) %></li>
+        <li><%= link_to "What's up, " + current_user.name.split(" ")[0] + "?", user_path(current_user.friendly_id), class: 'ahey' %></li>
         <li class="dropdown">
           <a class="dropdown-toggle fa fa-train" data-toggle="dropdown" href="#"><span class="caret"></span></a>
           <ul class="dropdown-menu">

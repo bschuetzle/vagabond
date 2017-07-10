@@ -29,6 +29,9 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.friendly.find(params[:id])
+    location_id = params[:location_id]
+    @location = Location.friendly.find_by(id: location_id)
+
   end
 
   def update
@@ -45,6 +48,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    location_id = params[:location_id]
+    @location = Location.friendly.find_by(id: location_id)
     @post = Post.joins(:user).select('posts.*, users.name').friendly.find(params[:id])
     render :show
   end
