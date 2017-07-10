@@ -31,3 +31,8 @@ body {
   background: #FFF;
   box-shadow: 6px 6px 20px #999;
 }
+
+.carousel, .item, {
+  position: relative;
+  max-height: 600px;
+}
