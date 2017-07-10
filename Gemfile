@@ -36,6 +36,12 @@ gem 'bcrypt', '~> 3.1.7'
 # Paperclip: Easy file attachment management for ActiveRecord from ThoughtBot
 gem "paperclip", "~> 4.2"
 
+gem 'friendly_id', '~> 5.1'
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'bootstrap-navbar', '~> 2.5'
+gem 'jquery-rails'
+
 gem 'geocoder'
 
 group :development, :test do
@@ -45,9 +51,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-  gem 'bootstrap-navbar', '~> 2.5'
-  gem 'jquery-rails'
+
 end
 
 group :development do
