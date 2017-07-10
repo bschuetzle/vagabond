@@ -1,8 +1,8 @@
-<h1><%= @location.city %>, <%= @location.country %></h1>
+<h1 class="city_name"><%= @location.city %>, <%= @location.country %></h1>
 <% if @location.photo_file_name != nil %> <br>
-<%= image_tag(@location.photo.url(:original), class: 'media-object') %>
+<%= image_tag(@location.photo.url(:original), class: 'media-object city_image') %>
 <% end %>
-<%= button_to "Add Post", new_location_post_path(@location.id), method: :get %>
+<%= button_to "Add Post", new_location_post_path(@location.id), method: :get, class: 'add_post_button' %>
 
 <% @posts.each do |p| %>
 <div class="loc_comment">
