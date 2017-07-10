@@ -4,6 +4,6 @@
   <p>Date Posted: <%= @post.created_at.strftime("%m/%d/%Y") %> </p>
   <%= @post.title %> <br>
   <%= @post.body %> <br>
-<%= button_to "Delete this Post", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' } %>
-<%= button_to "Edit this Post", edit_location_post_path(@post.location_id), method: :get %>
+<%= button_to "Delete this Post", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'buttonz' %>
+<%= button_to "Edit this Post", edit_location_post_path(@post.location_id), method: :get, class: 'buttonz' %>
 </div>

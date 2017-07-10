@@ -1,19 +1,17 @@
-<div>
-  <h1>Welcome, <%= @user.name %>!</h1>
-</div>
 
+<h1>Welcome, <%= @user.name %>!</h1>
 Current Location: <%= @user.current_location %><br>
 Email: <%= @user.email %><br>
 <% if @user.photo_file_name != nil %><br>
 <%= image_tag(@user.photo.url(:profile), class: 'media-object') %><br>
 <% end %>
 
-<%= button_to "Edit Your Profile", edit_user_path, method: :get %>
+<%= button_to "Edit Your Profile", edit_user_path, method: :get, class: 'buttonz' %>
 
+<div class="user_popo">
 <h3>All of Your Posts</h4>
 
 <% @posts.each do |post| %>
-<div class="user_popo">
   <%= link_to post.title, location_post_path(post.location_id, post.id) %>
 </div>
 <% end %>
