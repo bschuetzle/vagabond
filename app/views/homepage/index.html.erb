@@ -34,7 +34,7 @@
           <%= image_tag("traintracks2.jpg") %>
         </div>
         <div class="item">
-          <%= image_tag("queenstown.jpeg") %>
+          <%= image_tag("traveler.jpg") %>
         </div>
         ...
       </div>
@@ -48,7 +48,12 @@
       </a>
     </div>
     
-    <div id="map"></div>
+    <div class="container">
+      <%= content_tag :div, class: "locations_class", data: {locations: @locations} do %>
+      <% end %>
+
+      <div id="map"></div>
+    </div>
     <script>
 
       function initMap() {
