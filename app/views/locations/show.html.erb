@@ -2,6 +2,7 @@
 <% if @location.photo_file_name != nil %> <br>
 <%= image_tag(@location.photo.url(:original), class: 'media-object') %>
 <% end %>
+<%= button_to "Add Post", new_location_post_path(@location.id), method: :get %>
 
 <% @posts.each do |p| %>
 <div class="loc_comment">
