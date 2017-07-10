@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     resources :posts, only: :show
   end
 
+  get 'cities' => 'locations#index'
+  resources :locations, only: [:index]
+
   resources :locations do
     resources :posts
   end
