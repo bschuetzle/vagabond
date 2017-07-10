@@ -18,17 +18,17 @@ class LocationsController < ApplicationController
   end
 
   def edit
-    @location = Location.find(params[:id])
+    @location = Location.friendly.find(params[:id])
   end
 
   def update
-    location = Location.find(params[:id])
+    location = Location.friendly.find(params[:id])
     location.update_attributes(location_params)
     redirect_to location_path(location)
   end
 
   def destroy
-    location = Location.find(params[:id])
+    location = Location.friendly.find(params[:id])
     location.destroy
     redirect_to locations_path
   end
@@ -36,7 +36,7 @@ class LocationsController < ApplicationController
 
   def show
     location_id = params[:location_id]
-    @location = Location.find(params[:id])
+    @location = Location.friendly.find(params[:id])
     # @posts = Post.order('id')
     @posts = Post.joins(:user).select('posts.*, users.name')
     render :show
