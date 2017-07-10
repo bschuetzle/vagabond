@@ -14,7 +14,6 @@
 
   <% @posts.each do |post| %>
     <%= link_to post.title, location_post_path(post.location_id, post.id) %>
-
+  <% end %>
   </div>
 </div>
-  
