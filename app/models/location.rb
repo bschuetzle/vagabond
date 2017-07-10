@@ -9,4 +9,14 @@ class Location < ApplicationRecord
   def address
     [city, state, country].compact.join(', ')
   end
+
+  extend FriendlyId
+  friendly_id :city, use: :slugged
+
+  private
+
+  def should_generate_new_friendly_id?
+    slug.nil? || city_changed?
+  end
+
 end

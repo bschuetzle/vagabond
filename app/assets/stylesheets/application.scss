@@ -18,11 +18,17 @@ body {
   background-color: #F1F1F1;
 }
 
-.loc_comment, .post_post, .user_popo {
+.loc_comment, .post_post, .user_popo, .single_popo {
   margin: 20px 0;
   padding: 15px;
   background: #FFF;
   box-shadow: 9px 9px 30px #999;
+}
+
+form {
+  margin: 20px 0;
+  padding: 15px;
+  background: #FFF;
 }
 
 .user_popo, .loc_loc {
@@ -80,4 +86,45 @@ body {
   text-align: center;
   margin-bottom: 20px;
 
+.buttonz {
+  color: #FFF;
+
+  background-color: #144491;
+  padding: 5px 10px;
+  border: 2px solid #144491;
+  border-radius: 5px;
+}
+
+.buttonz:hover,  .buttonz:focus,{
+  color: #144491;
+  font-weight: 700;
+  background-color: #FFF;
+}
+
+a {
+  color: #144491;
+}
+
+a:hover {
+  color: #1c29db;
+  text-decoration: none;
+}
+
+.ahey {
+  color: #144491;
+}
+
+.ahey:hover {
+  color: #1c29db;
+  text-decoration: none;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
 }

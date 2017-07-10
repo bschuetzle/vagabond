@@ -1,3 +1,4 @@
+
 <div class="container">
   <h1>Edit your profile</h1>
   <%= form_for @user do |f| %>
@@ -8,6 +9,6 @@
   <%= image_tag(@user.photo.url(:profile), class: 'media-object') %>
   <% end %>
   <%= f.file_field :photo %> <br>
-    <%= f.submit "Save Changes" %>
+    <%= f.submit "Save Changes", class: 'buttonz' %>
   <% end %>
 </div>

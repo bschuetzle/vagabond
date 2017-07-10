@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root  "homepage#index"
+
   get 'login' => 'sessions#new'
   delete 'logout' => 'sessions#destroy'
   resources :sessions, only: [:new, :create, :destroy]
@@ -12,7 +13,5 @@ Rails.application.routes.draw do
   resources :locations do
     resources :posts
   end
-
-  resources :posts, only: :show
 
 end
