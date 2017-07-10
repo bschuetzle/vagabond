@@ -47,18 +47,19 @@ p "Deleting all the locations"
 # end
 
 locations_data = [
-  { city: "San Francisco", state: "California", region: "United States", lat: 37.47, long: -122.25 },
-  { city: "London", state: "-", region: "England", lat: 51.507351, long: -0.127758 },
-  { city: "Gibraltar", state: "-", region: "UK", lat: 36.140751, long: -5.353585 },
-  { city: "Surt", state: "-", region: "Libya", lat: 31.189689, long: 16.570193 },
-  { city: "Marawi City", state: "-", region: "Philipines", lat: 7.9986, long: 124.2928 },
-  { city: "Mosul", state: "-", region: "Iraq", lat: 36.356648, long: 43.164000 },
-  { city: "Raqqa", state: "-", region: "Syria", lat: 35.959411, long: 38.998105 },
-  { city: "Dabiq", state: "-", region: "Syria", lat: 36.536528, long: 37.270459 },
-  { city: "Bauchi", state: "-", region: "Nigeria", lat: 10.637109, long: 10.080730 },
-  { city: "Maiduguri", state: "-", region: "Nigeria", lat: 11.831098, long: 13.150967 },
-  { city: "Ataq", state: "-", region: "Yemen", lat: 14.529564, long: 46.830127 },
-  { city: "Makhachkala", state: "Dagestan", region: "Russia", lat: 42.966631, long: 47.512629 }
+
+  { city: "San Francisco", state: "California", country: "United States", lat: 37.47, long: -122.25 },
+  { city: "London", state: "-", country: "England", lat: 51.507351, long: -0.127758 },
+  { city: "Gibraltar", state: "-", country: "UK", lat: 36.140751, long: -5.353585 },
+  { city: "Surt", state: "-", country: "Libya", lat: 31.189689, long: 16.570193 },
+  { city: "Marawi City", state: "-", country: "Philipines", lat: 7.9986, long: 124.2928 },
+  { city: "Mosul", state: "-", country: "Iraq", lat: 36.356648, long: 43.164000 },
+  { city: "Raqqa", state: "-", country: "Syria", lat: 35.959411, long: 38.998105 },
+  { city: "Dabiq", state: "-", country: "Syria", lat: 36.536528, long: 37.270459 },
+  { city: "Bauchi", state: "-", country: "Nigeria", lat: 10.637109, long: 10.080730 },
+  { city: "Maiduguri", state: "-", country: "Nigeria", lat: 11.831098, long: 13.150967 },
+  { city: "Ataq", state: "-", country: "Yemen", lat: 14.529564, long: 46.830127 },
+  { city: "Makhachkala", state: "Dagestan", country: "Russia", lat: 42.966631, long: 47.512629 }
 ]
 
 Location.create(locations_data)
@@ -72,7 +73,7 @@ posts_data = []
 
 50.times do
   posts_data << {
-    :title => FFaker::HipsterIpsum.sentence,
+    :title => FFaker::HipsterIpsum.words(num = 3).join(" "),
     :body => FFaker::HipsterIpsum.paragraph,
     :user_id => rand(User.first.id..User.last.id),
     :location_id => rand(Location.first.id..Location.last.id)

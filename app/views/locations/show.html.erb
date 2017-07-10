@@ -1,4 +1,4 @@
-<h1><%= @location.city %>, <%= @location.region %></h1>
+<h1><%= @location.city %>, <%= @location.country %></h1>
 Coordinates: <%= @location.lat %>/<%= @location.long %> <br>
 <% if @location.photo_file_name != nil %> <br>
 <%= image_tag(@location.photo.url(:original), class: 'media-object') %>
