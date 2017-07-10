@@ -54,7 +54,11 @@ locations_data = [
   { city: "Marawi City", state: "-", region: "Philipines", lat: 7.9986, long: 124.2928 },
   { city: "Mosul", state: "-", region: "Iraq", lat: 36.356648, long: 43.164000 },
   { city: "Raqqa", state: "-", region: "Syria", lat: 35.959411, long: 38.998105 },
-  { city: "Dabiq", state: "-", region: "Syria", lat: 36.536528, long: 37.270459 }
+  { city: "Dabiq", state: "-", region: "Syria", lat: 36.536528, long: 37.270459 },
+  { city: "Bauchi", state: "-", region: "Nigeria", lat: 10.637109, long: 10.080730 },
+  { city: "Maiduguri", state: "-", region: "Nigeria", lat: 11.831098, long: 13.150967 },
+  { city: "Ataq", state: "-", region: "Yemen", lat: 14.529564, long: 46.830127 },
+  { city: "Makhachkala", state: "Dagestan", region: "Russia", lat: 42.966631, long: 47.512629 }
 ]
 
 Location.create(locations_data)
