@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-default hey">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -13,7 +14,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right ">
         <% if current_user %>
         <li><%= link_to "What's up, " + current_user.name.split(" ")[0] + "?", user_path(current_user.friendly_id) %></li>
         <li class="dropdown">
