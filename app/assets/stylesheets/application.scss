@@ -38,6 +38,54 @@ form {
   box-shadow: 6px 6px 20px #999;
 }
 
+.image_container {
+  position: relative;
+  top: -50px;
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.city_image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.city_name {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+
+}
+
+.add_post_button {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  margin-bottom: 50px;
+}
+
+.add_post_button:hover {
+  background-color: rgba(255, 153, 0, 0.25);
+}
+
+.location_intro {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+
 .buttonz {
   color: #FFF;
 
@@ -61,7 +109,6 @@ a:hover {
   color: #1c29db;
   text-decoration: none;
 }
-
 
 .ahey {
   color: #144491;

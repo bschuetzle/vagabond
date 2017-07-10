@@ -1,11 +1,14 @@
-<h1>Edit your profile</h1>
-<%= form_for @user do |f| %>
-Name: <%= f.text_field :name %> <br>
-Current Location:  <%= f.text_field :current_location %> <br>
-Email:  <%= f.text_field :email %> <br>
-Profile Pic: <% if @user.photo_file_name != nil %><br>
-<%= image_tag(@user.photo.url(:profile), class: 'media-object') %>
-<% end %>
-<%= f.file_field :photo %> <br>
-  <%= f.submit "Save Changes", class: 'buttonz' %>
-<% end %>
+
+<div class="container">
+  <h1>Edit your profile</h1>
+  <%= form_for @user do |f| %>
+  Name: <%= f.text_field :name %> <br>
+  Current Location:  <%= f.text_field :current_location %> <br>
+  Email:  <%= f.text_field :email %> <br>
+  Profile Pic: <% if @user.photo_file_name != nil %><br>
+  <%= image_tag(@user.photo.url(:profile), class: 'media-object') %>
+  <% end %>
+  <%= f.file_field :photo %> <br>
+    <%= f.submit "Save Changes", class: 'buttonz' %>
+  <% end %>
+</div>

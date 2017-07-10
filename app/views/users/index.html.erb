@@ -1,10 +1,11 @@
-<h1>Your Vagrant Profile</h1>
-
-<% @users.each do |user| %>
-ID: <%= user.id %><br/>
-Name: <%= user.name %><br/>
-Email: <%= user.email %><br/>
-Location: <%= user.current_location %><br/>
-Join Date: <%= user.join_date %><br/>
-<br/>
-<% end %>
+<div class="container">
+  <h1>Your Vagrant Profile</h1>
+  <% @users.each do |user| %>
+  ID: <%= user.id %><br/>
+  Name: <%= user.name %><br/>
+  Email: <%= user.email %><br/>
+  Location: <%= user.current_location %><br/>
+  Join Date: <%= user.join_date %><br/>
+  <br/>
+  <% end %>
+</div>

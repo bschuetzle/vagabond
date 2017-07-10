@@ -1,6 +1,9 @@
-<h1>Edit your Post</h1>
-<%= form_for ([@location, @post]) do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :body %>
-  <%= f.submit "Save Changes", class: 'buttonz' %>
-<% end %>
+
+<div class="container">
+  <h1>Edit your Post</h1>
+  <%= form_for ([@location, @post]) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_field :body %>
+    <%= f.submit "Save Changes", class: 'buttonz' %>
+  <% end %>
+</div>

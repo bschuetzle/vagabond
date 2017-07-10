@@ -1,16 +1,24 @@
-<h1><%= @location.city %>, <%= @location.country %></h1>
-<% if @location.photo_file_name != nil %> <br>
-<%= image_tag(@location.photo.url(:original), class: 'media-object') %>
-<% end %>
-<%= button_to "Post It!", new_location_post_path(@location.id), method: :get, class: 'buttonz'  %>
 
-<% @posts.each do |p| %>
-<div class="loc_comment">
-  <h2><%= p.title %></h2>
-  <h3>by <%= p.name %></h3>
-  <p><%= p.body[0..500] + '...' %></p>
-  <%= link_to "Read more", location_post_path(@location, p) %>
-  <br/>
+<div class="image_container">
+  <h1 class="city_name"><%= @location.city %></h1>
+  <% if @location.photo_file_name != nil %> <br>
+  <%= image_tag(@location.photo.url(:original), class: 'media-object city_image') %>
+  <% end %>
 </div>
 
-<% end %>
+<div class="container">
+  <p class="location_intro">Explore <%= @location.city %> on the cheap like a local, with these awesome tips, tricks, stories, and hacks from the InterRail community! </p>
+  <% if current_user %>
+    <%= button_to "Add Post", new_location_post_path(@location.id), method: :get, class: 'add_post_button' %>
+  <% end %>
+  <% @posts.each do |p| %>
+  <div class="loc_comment">
+    <h2><%= p.title %></h2>
+    <h3>by <%= p.name %></h3>
+    <p><%= p.body[0..500] + '...' %></p>
+    <%= link_to "Read full post" , location_post_path(@location, p) %>
+    <br/>
+  </div>
+  <% end %>
+</div>
+

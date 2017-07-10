@@ -1,9 +1,10 @@
-Fill Out Your Profile
-
-<%= form_for :user, url: "/users", method: "post" do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :current_location, placeholder: "Current Location" %>
-  <%= f.text_field :email, placeholder: "Email" %>
-  <%= f.password_field :password, placeholder: "Password" %>
-  <%= f.submit "Save Your Profile", class: 'buttonz' %>
-<% end %>
+<div class="container">
+  Fill Out Your Profile
+  <%= form_for :user, url: "/users", method: "post" do |f| %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :current_location, placeholder: "Current Location" %>
+    <%= f.text_field :email, placeholder: "Email" %>
+    <%= f.password_field :password, placeholder: "Password" %>
+    <%= f.submit "Save Your Profile", class: 'buttonz' %>
+  <% end %>
+</div>
