@@ -38,6 +38,11 @@ form {
   box-shadow: 6px 6px 20px #999;
 }
 
+.carousel, .item, {
+  position: relative;
+  max-height: 625px;
+}
+
 .image_container {
   position: relative;
   top: -50px;
