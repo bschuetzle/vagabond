@@ -18,7 +18,7 @@ body {
   background-color: #F1F1F1;
 }
 
-.loc_comment, .post_post, .user_popo, .single_popo {
+.loc_comment, .post_post, .user_popo, .single_popo, form {
   margin: 20px 0;
   padding: 15px;
   background: #FFF;
@@ -30,4 +30,38 @@ body {
   padding: 10px;
   background: #FFF;
   box-shadow: 6px 6px 20px #999;
+}
+
+.buttonz {
+  color: #FFF;
+
+  background-color: #144491;
+  padding: 5px 10px;
+  border: 2px solid #144491;
+  border-radius: 5px;
+}
+
+.buttonz:hover,  .buttonz:focus,{
+  color: #144491;
+  font-weight: 700;
+  background-color: #FFF;
+}
+
+a {
+  color: #144491;
+}
+
+a:hover {
+  color: #1c29db;
+  text-decoration: none;
+}
+
+
+.ahey {
+  color: #144491;
+}
+
+.ahey:hover {
+  color: #1c29db;
+  text-decoration: none;
 }
