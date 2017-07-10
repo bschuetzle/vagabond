@@ -1,10 +1,12 @@
-<h1>Posted Locations</h1>
+<div class="container">
+  <h1>Posted Locations</h1>
 
-<% @locations.each do |location| %>
-<div class="loc_loc">
-  <h4> <%= link_to(location) do %>
-  <%= location.city %>
+  <% @locations.each do |location| %>
+  <div class="loc_loc">
+    <h4> <%= link_to(location) do %>
+    <%= location.city %>
+    <% end %>
+  </h4>
+  </div>
   <% end %>
-</h4>
 </div>
-<% end %>
