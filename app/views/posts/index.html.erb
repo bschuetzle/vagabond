@@ -1,11 +1,13 @@
-<h1><%=  @location.city %> is full of Vagrants</h1>
+<div class="container">
+  <h1><%=  @location.city %> is full of Vagrants</h1>
 
-<% @posts.each do |p| %>
-  <div class="post_post">
-    <p>ID: <%= p.id %></p>
-    <p>User: <%= p.user_id %></p>
-    <p>Title <%= p.title %></p>
-    <p>Body: <%= p.body %></p>
-    <br/>
-  </div>
-<% end %>
+  <% @posts.each do |p| %>
+    <div class="post_post">
+      <p>ID: <%= p.id %></p>
+      <p>User: <%= p.user_id %></p>
+      <p>Title <%= p.title %></p>
+      <p>Body: <%= p.body %></p>
+      <br/>
+    </div>
+  <% end %>
+</div>
