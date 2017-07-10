@@ -14,6 +14,6 @@ Email: <%= @user.email %><br>
 
 <% @posts.each do |post| %>
 <div class="user_popo">
-  <%= link_to post.title, post_path(post.id) %>
+  <%= link_to post.title, location_post_path(post.location_id, post.id) %>
 </div>
 <% end %>

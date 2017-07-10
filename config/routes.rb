@@ -13,6 +13,4 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  resources :posts, only: :show
-
 end
