@@ -7,6 +7,6 @@ class Location < ApplicationRecord
   after_validation :geocode
 
   def address
-    [city, state, region].compact.join(', ')
+    [city, state, country].compact.join(', ')
   end
 end
