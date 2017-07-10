@@ -1,13 +1,14 @@
 <h1><%= @location.city %>, <%= @location.country %></h1>
-Coordinates: <%= @location.lat %>/<%= @location.long %> <br>
 <% if @location.photo_file_name != nil %> <br>
 <%= image_tag(@location.photo.url(:original), class: 'media-object') %>
 <% end %>
 
 <% @posts.each do |p| %>
-<h2><%= p.title %></h2>
-<h3>by <%= p.name %></h3>
-<p><%= p.body %></p>
-<%= link_to "Read full post" , location_post_path(@location, p) %>
-<br/>
+<div class="loc_comment">
+  <h2><%= p.title %></h2>
+  <h3>by <%= p.name %></h3>
+  <p><%= p.body %></p>
+  <%= link_to "Read full post" , location_post_path(@location, p) %>
+  <br/>
 <% end %>
+</div>
