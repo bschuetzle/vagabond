@@ -1,7 +1,7 @@
 <h1>Look at this Vagrant Post for <%= @location.city %>!</h1>
 <div class="single_popo">
-  <p>Posted By: <%= @post.name %> </p>
-  <p>Date Posted: <%= @post.created_at.strftime("%m/%d/%Y") %> </p>
+  Posted By: <%= @post.name %> <br/>
+  Date Posted: <%= @post.created_at.strftime("%m/%d/%Y") %><br/>
   <%= @post.title %> <br>
   <%= @post.body %> <br>
 <%= button_to "Delete this Post", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'buttonz' %>
