@@ -68,7 +68,7 @@ posts_data = []
 
 50.times do
   posts_data << {
-    :title => FFaker::HipsterIpsum.sentence,
+    :title => FFaker::HipsterIpsum.words(num = 3).join(" "),
     :body => FFaker::HipsterIpsum.paragraph,
     :user_id => rand(User.first.id..User.last.id),
     :location_id => rand(Location.first.id..Location.last.id)

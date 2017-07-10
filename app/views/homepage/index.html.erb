@@ -26,7 +26,8 @@
 
         });
         var location_data = $('.locations_class').data('locations');
-        var image = "https://dl.dropboxusercontent.com/s/i323dasyjauidwa/train_marker.png?dl=0";
+        // var image = "https://dl.dropboxusercontent.com/s/i323dasyjauidwa/train_marker.png?dl=0";
+        var image = "https://dl.dropboxusercontent.com/s/2pjw2ku51x8mpoz/train_marker2.png?dl=0";
         <% @locations.each do |location| %>
           <% coord = "{lat: #{location.lat}, lng: #{location.long}}" %>
           <% p coord %>
