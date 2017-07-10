@@ -1,4 +1,3 @@
-
 <h1>Welcome, <%= @user.name %>!</h1>
 Current Location: <%= @user.current_location %><br>
 Email: <%= @user.email %><br>
@@ -6,7 +5,7 @@ Email: <%= @user.email %><br>
 <%= image_tag(@user.photo.url(:profile), class: 'media-object') %><br>
 <% end %>
 
-<%= button_to "Edit Your Profile", edit_user_path, method: :get, class: 'buttonz' %>
+<%= button_to "Update Your Profile", edit_user_path, method: :get, class: 'buttonz' %>
 
 <div class="user_popo">
 <h3>All of Your Posts</h4>
