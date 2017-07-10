@@ -7,7 +7,7 @@
 <div class="loc_comment">
   <h2><%= p.title %></h2>
   <h3>by <%= p.name %></h3>
-  <p><%= p.body %></p>
+  <p><%= p.body[0..500] + '...' %></p>
   <%= link_to "Read full post" , location_post_path(@location, p) %>
   <br/>
 </div>
