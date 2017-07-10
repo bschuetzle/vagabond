@@ -2,18 +2,18 @@
   <h1>Welcome, <%= @user.name %>!</h1>
 </div>
 
-<%= @user.current_location %><br>
-<%= @user.email %><br>
+Current Location: <%= @user.current_location %><br>
+Email: <%= @user.email %><br>
 <% if @user.photo_file_name != nil %><br>
 <%= image_tag(@user.photo.url(:profile), class: 'media-object') %><br>
 <% end %>
 
-<%= button_to "Delete Your Account", @user, method: :delete, data: {confirm: 'Are you sure?' } %><br>
 <%= button_to "Edit Your Profile", edit_user_path, method: :get %>
 
-<h4>User Posts</h4>
+<h3>All of Your Posts</h4>
 
 <% @posts.each do |post| %>
+<div class="user_popo">
   <%= link_to post.title, post_path(post.id) %>
-  <br/>
+</div>
 <% end %>

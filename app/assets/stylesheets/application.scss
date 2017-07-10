@@ -12,3 +12,22 @@ h1, h3 {
 p {
   font-family: 'Spectral', serif;
 }
+
+body {
+  color: 	#333;
+  background-color: #F1F1F1;
+}
+
+.loc_comment, .post_post, .user_popo {
+  margin: 20px 0;
+  padding: 15px;
+  background: #FFF;
+  box-shadow: 9px 9px 30px #999;
+}
+
+.user_popo, .loc_loc {
+  margin: 10px 0;
+  padding: 10px;
+  background: #FFF;
+  box-shadow: 6px 6px 20px #999;
+}
