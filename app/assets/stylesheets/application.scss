@@ -47,7 +47,7 @@ form {
   position: relative;
   top: -50px;
   overflow: hidden;
-  max-height: 500px;
+  max-height: 600px;
 }
 
 .city_image {
@@ -60,13 +60,13 @@ form {
 
 .city_name {
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 0;
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 50px;
-
+  font-size: 60px;
+  font-family: 'Lato', sans-serif;
 }
 
 .add_post_button {
@@ -133,4 +133,26 @@ input[type=text], select {
     border: 1px solid #333;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button_to {
+  background-color: #F1F1F1;
+}
+
+.new_user {
+  background-color: #F1F1F1;
+}
+
+.form_for {
+  background-color: #F1F1F1;
 }
