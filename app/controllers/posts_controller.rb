@@ -15,9 +15,9 @@ class PostsController < ApplicationController
   def create
     location_id = params[:location_id]
     actual_params = post_params
-    actual_params[:location_id] = location_id
     actual_params[:user_id] = session[:user_id]
-    @location = Location.friendly.find_by(id: location_id)
+    @location = Location.friendly.find(location_id)
+    actual_params[:location_id] = @location.id
     @post = Post.new(actual_params)
     if @post.save
 
