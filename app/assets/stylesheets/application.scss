@@ -1,2 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Spectral', serif;
+}

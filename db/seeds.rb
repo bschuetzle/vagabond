@@ -47,14 +47,19 @@ p "Deleting all the locations"
 # end
 
 locations_data = [
-  { city: "San Francisco", state: "California", country: "United States", region: "North America" },
-  { city: "London", state: "-", country: "England", region: "Western Europe" },
-  { city: "Gibraltar", state: "-", country: "UK", region: "Western Europe" },
-  { city: "Surt", state: "-", country: "Libya", region: "North Africa" },
-  { city: "Marawi City", state: "-", country: "Philipines", region: "Southeast Asia" },
-  { city: "Mosul", state: "-", country: "Iraq", region: "Middle East" },
-  { city: "Raqqa", state: "-", country: "Syria", region: "Middle East" },
-  { city: "Dabiq", state: "-", country: "Syria", region: "Middle East" }
+
+  { city: "San Francisco", state: "California", country: "United States", lat: 37.47, long: -122.25 },
+  { city: "London", state: "-", country: "England", lat: 51.507351, long: -0.127758 },
+  { city: "Gibraltar", state: "-", country: "UK", lat: 36.140751, long: -5.353585 },
+  { city: "Surt", state: "-", country: "Libya", lat: 31.189689, long: 16.570193 },
+  { city: "Marawi City", state: "-", country: "Philipines", lat: 7.9986, long: 124.2928 },
+  { city: "Mosul", state: "-", country: "Iraq", lat: 36.356648, long: 43.164000 },
+  { city: "Raqqa", state: "-", country: "Syria", lat: 35.959411, long: 38.998105 },
+  { city: "Dabiq", state: "-", country: "Syria", lat: 36.536528, long: 37.270459 },
+  { city: "Bauchi", state: "-", country: "Nigeria", lat: 10.637109, long: 10.080730 },
+  { city: "Maiduguri", state: "-", country: "Nigeria", lat: 11.831098, long: 13.150967 },
+  { city: "Ataq", state: "-", country: "Yemen", lat: 14.529564, long: 46.830127 },
+  { city: "Makhachkala", state: "Dagestan", country: "Russia", lat: 42.966631, long: 47.512629 }
 ]
 
 Location.create(locations_data)
