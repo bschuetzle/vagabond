@@ -1,17 +1,22 @@
 
 <div class="container">
-  <h1>Welcome, <%= @user.name %>!</h1>
-  Current Location: <%= @user.current_location %><br>
-  Email: <%= @user.email %><br>
-  <%= image_tag(@user.photo.url(:profile), class: 'media-object') %><br>
+  <%= render 'shared/flash' %>
+  <div class="form">
+    <h1 class="form_header_text"><%= @user.name %></h1>
 
-  <%= button_to "Update Your Profile", edit_user_path, method: :get, class: 'buttonz' %>
+    <%= image_tag(@user.photo.url(:profile), class: 'media-object profile_photo') %><br>
+    <p class="user_info"><%= @user.current_location %></p>
+    <p class="user_info"><%= @user.email %><br></p>
 
-  <div class="user_popo">
-  <h3>All of Your Posts</h4>
+    <%= button_to "Update Profile", edit_user_path, method: :get, class: 'default_button' %>
 
-  <% @posts.each do |post| %>
-    <%= link_to post.title, location_post_path(post.location_id, post.id) %>
-  <% end %>
+    <div class="user_popo">
+    <h3>Your Posts</h4>
+    <% @posts.each do |post| %>
+
+      <%= link_to post.title, location_post_path(post.location_id, post.id) %>
+    <% end %>
+    </div>
+
   </div>
 </div>
