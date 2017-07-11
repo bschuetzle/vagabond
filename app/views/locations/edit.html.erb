@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Edit <%=  @location.city %>'s Information </h1>
+  <h1>Edit Information about <%=  @location.city %></h1>
   <%= form_for @location, :html => {:class => 'form_for'} do |f| %>
     City: <%= f.text_field :city %>
     State: <%= f.text_field :state %>

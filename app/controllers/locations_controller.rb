@@ -33,7 +33,6 @@ class LocationsController < ApplicationController
     redirect_to locations_path
   end
 
-
   def show
     location_id = params[:location_id]
     @location = Location.friendly.find(params[:id])
