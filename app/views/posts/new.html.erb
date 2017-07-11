@@ -2,7 +2,7 @@
   <h1>Post your Vagrancy</h1>
   <%= form_for ([@location, @post]), :html => {:class => 'form_for'} do |f| %>
   Post Title:  <%= f.text_field :title %> <br>
-  Whatcha have to say?  <%= f.text_field :body %> <br>
+  Whatcha have to say?  <%= f.text_area :body, rows: 5 %> <br>
     <%= f.submit "Post It!", class: 'default_button' %>
   <% end %>
  </div>

@@ -123,17 +123,17 @@ form {
 .default_button {
   display: block;
   margin: 20px 0;
-  background-color: rgba(255,255,255,0);
-  color: black;
-  border: 1px solid black;
+  color: #FFF;
+  background-color: rgb(0, 128, 43);
+  padding: 5px 10px;
+  border: 2px solid rgb(0, 128, 43);
   border-radius: 5px;
-  width: 130px;
-  height: 40px;
 }
 
-.default_button:hover {
-  color: rgb(204,59,0);
-  background-color: rgb(230, 230, 230)
+.default_button:hover, default_button:focus {
+  color: rgb(0, 128, 43);
+  font-weight: 700;
+  background-color: #FFF;
 }
 
 .add_post {
@@ -152,24 +152,20 @@ form {
   background-color: rgb(230, 230, 230)
 }
 
-.post_show_buttons_cont {
-  display: inline-block;
-}
-
 .post_show_buttons {
-  display: inline-block;
-  // margin: 20px 0;
-  background-color: rgba(255,255,255,0);
-  color: black;
-  border: 1px solid black;
+  display: block;
+  margin: 0;
+  color: #FFF;
+  background-color: rgb(0, 128, 43);
+  padding: 5px 10px;
+  border: 2px solid rgb(0, 128, 43);
   border-radius: 5px;
-  width: 130px;
-  height: 40px;
 }
 
 .post_show_buttons:hover {
-  color: rgb(204,59,0);
-  background-color: rgb(230, 230, 230)
+  color: rgb(0, 128, 43);
+  font-weight: 700;
+  background-color: #FFF;
 }
 
 h4 .edit_location {
@@ -241,8 +237,14 @@ input[type=password], select {
     box-sizing: border-box;
 }
 
-.button_to {
-  background-color: #F1F1F1;
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .new_user {
@@ -280,6 +282,12 @@ input[type=password], select {
 
 #map {
   margin-bottom: 100px;
+}
+
+.button_to {
+  margin: 10px 0;
+  padding: 0px;
+  background-color: #F1F1F1;
 }
 
 .edit-me-timbers {
