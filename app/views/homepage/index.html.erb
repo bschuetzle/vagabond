@@ -55,11 +55,18 @@
     </div>
 
     <div class="container">
+      <div class="map_text">
+        <p>some text here</p>
+      </div>
+    </div>
+
+    <div class="container">
       <%= content_tag :div, class: "locations_class", data: {locations: @locations} do %>
       <% end %>
-
       <div id="map"></div>
     </div>
+
+
     <script>
 
       function initMap() {
