@@ -10,11 +10,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      login(user)
-      redirect_to user_path(user)
-    else render :new
+    @user = User.new(user_params)
+    if @user.save
+      login(@user)
+      redirect_to user_path(@user)
+    else
+      flash.now[:danger] = @user.errors.full_messages.join(". ")
+      render :new
     end
   end
 
