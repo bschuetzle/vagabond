@@ -9,10 +9,14 @@
 </div>
 
 <div class="container">
-  <p class="location_intro">Explore <%= @location.city %> on the cheap like a local, with these awesome tips, tricks, stories, and hacks from the InterRail community! </p>
-  <% if current_user %>
-    <%= button_to "Add Post", new_location_post_path(@location.id), method: :get, class: 'add_post_button' %>
-  <% end %>
+  <div class="location_intro_cont">
+    <p class="location_intro">Explore <%= @location.city %> like a local, with these awesome stories and tips from the InterRail community! </p>
+    <% if current_user %>
+      <%= button_to "Add Post", new_location_post_path(@location.id), method: :get, class: 'add_post_button' %>
+    <% else %>
+      <p class="location_intro">To contribute your own post, be sure to log in or sign up first</p>
+    <% end %>
+  </div>
   <% @posts.each do |p| %>
   <div class="loc_comment">
     <h2><%= p.title %></h2>

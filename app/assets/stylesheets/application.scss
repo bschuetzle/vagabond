@@ -95,18 +95,22 @@ form {
   border-radius: 5px;
   width: 100px;
   height: 40px;
-  margin-bottom: 50px;
 }
 
 .add_post_button:hover {
-  background-color: rgba(255, 153, 0, 0.25);
+  color: rgb(204,59,0);
+  background-color: rgb(230, 230, 230)
+}
+
+.location_intro_cont {
+  margin-bottom: 50px;
 }
 
 .location_intro {
+  text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  text-align: center;
-  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .buttonz {
