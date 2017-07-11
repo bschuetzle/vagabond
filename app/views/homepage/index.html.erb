@@ -32,9 +32,15 @@
         </div>
         <div class="item">
           <%= image_tag("traintracks2.jpg") %>
+          <div class="carousel-caption">
+            <h2>Ride Trains, listen to skrillex and explore...</h2>
+          </div>
         </div>
         <div class="item">
           <%= image_tag("traveler.jpg") %>
+          <div class="carousel-caption">
+            <h2>...some cool PLACES and THINGS</h2>
+          </div>
         </div>
         ...
       </div>
@@ -47,7 +53,7 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
     </div>
-    
+
     <div class="container">
       <%= content_tag :div, class: "locations_class", data: {locations: @locations} do %>
       <% end %>
