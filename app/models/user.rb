@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates_attachment :photo, content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
 
   def self.confirm(params)
     @user = User.friendly.find_by({email: params[:email]})
