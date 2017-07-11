@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h1>Look at this Vagrant Post for <%= @location_id %>!</h1>
+  <h1><%= @location_id %>!</h1>
   <div class="single_popo">
 
     <h2><%= @post.title %></h2>
@@ -11,7 +11,9 @@
       <div class="post_show_buttons_cont">
         <%= button_to "Edit", edit_location_post_path(@post.location_id), method: :get, class: 'post_show_buttons' %>
         <%= button_to "Delete", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'post_show_buttons' %>
+        <%= link_to "Back", location_path(@post.location) %></div>
       </div>
     <% end %>
   </div>
+
 </div>

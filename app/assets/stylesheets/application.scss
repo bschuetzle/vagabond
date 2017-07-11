@@ -191,7 +191,7 @@ h4 .edit_location {
   border-radius: 5px;
 }
 
-.buttonz:hover,  .buttonz:focus,{
+.buttonz:hover, .buttonz:focus,{
   color: #144491;
   font-weight: 700;
   background-color: #FFF;
@@ -267,6 +267,19 @@ textarea {
   font-weight: 600;
 }
 
+.pro-pro-1 {
+  display: relative;
+  float: left;
+}
+
+.pro-pro-2 {
+  display: relative;
+  float: left;
+  margin-left: 60px;
+  padding: 20px 50px 100px 20px;
+
+}
+
 #map {
   margin-bottom: 100px;
 }
@@ -275,4 +288,12 @@ textarea {
   margin: 10px 0;
   padding: 0px;
   background-color: #F1F1F1;
+}
+
+.edit-me-timbers {
+  display: inline-block;
+}
+
+.to-the-right {
+  position:absolute; right: 8%;
 }

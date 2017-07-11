@@ -1,8 +1,12 @@
 
 <div class="container">
   <%= render 'shared/flash' %>
-  <div class="form">
+  <div>
     <h1 class="form_header_text"><%= @user.name %></h1>
+    <div class="form pro-pro-1">
+      <%= image_tag(@user.photo.url(:profile), class: 'media-object profile_photo') %><br>
+      <p class="user_info">Current Location: <%= @user.current_location %></p>
+      <p class="user_info">Email: <%= @user.email %><br></p>
 
     <div class="profile_info_cont">
       <div class="profile_info_img">
@@ -24,5 +28,12 @@
       <% end %>
     </div>
 
+  </div>
+  <div class="user_popo pro-pro-2">
+    <h3 class="user_posts_heading">Your Posts</h4>
+    <% @posts.each do |post| %>
+      <p class="user_posts"><%= link_to post.title, location_post_path(post.location_id, post.id) %></p>
+    <% end %>
+  </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Post About a New Location</h1>
+  <h1>Post a New Location</h1>
   <%= form_for :location, url: "/locations", method: "post", :html => {:class => 'form_for'} do |f| %>
   City:  <%= f.text_field :city %> <br>
   State:  <%= f.text_field :state %> <br>
