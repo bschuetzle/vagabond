@@ -11,11 +11,10 @@
     <%= button_to "Update Profile", edit_user_path, method: :get, class: 'default_button' %>
 
     <div class="user_popo">
-    <h3>Your Posts</h4>
-    <% @posts.each do |post| %>
-
-      <%= link_to post.title, location_post_path(post.location_id, post.id) %>
-    <% end %>
+      <h3 class="user_posts_heading">Your Posts</h4>
+      <% @posts.each do |post| %>
+        <p class="user_posts"><%= link_to post.title, location_post_path(post.location_id, post.id) %></p>
+      <% end %>
     </div>
 
   </div>

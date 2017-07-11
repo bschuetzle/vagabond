@@ -2,11 +2,14 @@
 <div class="container">
   <h1>Look at this Vagrant Post for <%= @location_id %>!</h1>
   <div class="single_popo">
-    Posted By: <%= @post.name %> <br/>
-    Date Posted: <%= @post.created_at.strftime("%m/%d/%Y") %><br/>
-    <%= @post.title %> <br>
+
+    <h2><%= @post.title %></h2>
+    <h3>by <%= @post.name %></h3>
+    <h4><%= @post.created_at.strftime("%m/%d/%Y") %></h4>
     <%= @post.body %> <br>
-  <%= button_to "Delete this Post", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'buttonz' %>
-  <%= button_to "Edit this Post", edit_location_post_path(@post.location_id), method: :get, class: 'buttonz' %>
+    <div class="post_show_buttons_cont">
+      <%= button_to "Edit", edit_location_post_path(@post.location_id), method: :get, class: 'post_show_buttons' %>
+      <%= button_to "Delete", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'post_show_buttons' %>
+    </div>
   </div>
 </div>

@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   def show
     @user = User.friendly.find(params[:id])
     # @posts = Post.where(user_id: @user.id)
-    @posts = Post.joins(:user).select('posts.*, users.name').where(user_id: @user.id)
+    @posts = Post.joins(:user).select('posts.*, users.name').where(user_id: @user.id).order('id')
     render :show
   end
 

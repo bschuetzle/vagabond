@@ -110,6 +110,15 @@ form {
   font-family: 'Lato', sans-serif;
 }
 
+.user_posts_heading {
+  margin-bottom: 20px;
+}
+
+.user_posts {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
 .default_button {
   display: block;
   margin: 20px 0;
@@ -138,6 +147,26 @@ form {
 }
 
 .add_post:hover {
+  color: rgb(204,59,0);
+  background-color: rgb(230, 230, 230)
+}
+
+.post_show_buttons_cont {
+  display: inline-block;
+}
+
+.post_show_buttons {
+  display: inline-block;
+  // margin: 20px 0;
+  background-color: rgba(255,255,255,0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+}
+
+.post_show_buttons:hover {
   color: rgb(204,59,0);
   background-color: rgb(230, 230, 230)
 }
