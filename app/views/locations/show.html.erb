@@ -12,7 +12,7 @@
   <div class="location_intro_cont">
     <p class="location_intro">Explore <%= @location.city %> like a local, with these awesome stories and tips from the InterRail community! </p>
     <% if current_user %>
-      <%= button_to "Add Post", new_location_post_path(@location.id), method: :get, class: 'add_post_button' %>
+      <%= button_to "Add Post", new_location_post_path(@location.id), method: :get, class: 'default_button' %>
     <% else %>
       <p class="location_intro">To contribute your own post, be sure to log in or sign up first</p>
     <% end %>

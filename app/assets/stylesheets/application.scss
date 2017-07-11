@@ -100,18 +100,19 @@ form {
   font-family: 'Lato', sans-serif;
 }
 
-.add_post_button {
+.default_button {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: rgba(255,255,255,0);
   color: black;
   border: 1px solid black;
   border-radius: 5px;
   width: 100px;
   height: 40px;
+
 }
 
-.add_post_button:hover {
+.default_button:hover {
   color: rgb(204,59,0);
   background-color: rgb(230, 230, 230)
 }
