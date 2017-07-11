@@ -4,11 +4,18 @@
   <div class="form">
     <h1 class="form_header_text"><%= @user.name %></h1>
 
-    <%= image_tag(@user.photo.url(:profile), class: 'media-object profile_photo') %><br>
-    <p class="user_info"><%= @user.current_location %></p>
-    <p class="user_info"><%= @user.email %><br></p>
-
-    <%= button_to "Update Profile", edit_user_path, method: :get, class: 'default_button' %>
+    <div class="profile_info_cont">
+      <div class="profile_info_img">
+        <%= image_tag(@user.photo.url(:profile), class: 'media-object profile_photo') %><br>
+      </div>
+      <div class="profile_info_cont_text">
+        <p class="user_info"><%= @user.current_location %></p>
+        <p class="user_info"><%= @user.email %><br></p>
+      </div>
+      <div class="profile_info_btn">
+        <%= button_to "Update Profile", edit_user_path, method: :get, class: 'default_button' %>
+      </div>
+    </div>
 
     <div class="user_popo">
       <h3 class="user_posts_heading">Your Posts</h4>
