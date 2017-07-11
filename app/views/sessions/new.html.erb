@@ -1,4 +1,6 @@
+
 <div class="container">
+  <%= render 'shared/flash' %>
   <div class="form">
     <h1 class="form_header_text">Log In</h1>
     <%= form_for @user, url: "/sessions", method: "post" do |f| %>

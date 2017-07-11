@@ -17,19 +17,6 @@
 <body>
   <%= render 'nav/header' %>
 
-  <div class="container">
-    <div class="flash_msg">
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>">
-            <% if key == "danger" %>
-              <strong>Sorry, you got issues: </strong>
-            <% end %>
-          <%= value %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
   <%= yield %>
 
 </body>

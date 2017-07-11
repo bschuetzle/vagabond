@@ -1,4 +1,6 @@
+
 <div class="container">
+  <%= render 'shared/flash' %>
   <div class="form">
     <h1 class="form_header_text">Sign Up</h1>
     <%= form_for :user, url: "/users", method: "post", :html => {:class => 'form_for'} do |f| %>
