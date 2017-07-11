@@ -7,9 +7,11 @@
     <h3>by <%= @post.name %></h3>
     <h4><%= @post.created_at.strftime("%m/%d/%Y") %></h4>
     <%= @post.body %> <br>
-    <div class="post_show_buttons_cont">
-      <%= button_to "Edit", edit_location_post_path(@post.location_id), method: :get, class: 'post_show_buttons' %>
-      <%= button_to "Delete", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'post_show_buttons' %>
-    </div>
+    <% if @post.name === current_user.name %>
+      <div class="post_show_buttons_cont">
+        <%= button_to "Edit", edit_location_post_path(@post.location_id), method: :get, class: 'post_show_buttons' %>
+        <%= button_to "Delete", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'post_show_buttons' %>
+      </div>
+    <% end %>
   </div>
 </div>

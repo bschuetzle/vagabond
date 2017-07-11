@@ -13,7 +13,7 @@
     <div class="user_popo">
       <h3 class="user_posts_heading">Your Posts</h4>
       <% @posts.each do |post| %>
-        <p class="user_posts"><%= link_to post.title, location_post_path(post.location_id, post.id) %></p>
+        <p class="user_posts"><%= link_to post.created_at.strftime("%m/%d/%Y") + ': ' + post.title, location_post_path(post.location_id, post.id) %></p>
       <% end %>
     </div>
 
