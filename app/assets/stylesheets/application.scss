@@ -194,7 +194,7 @@ h4 .edit_location {
   border-radius: 5px;
 }
 
-.buttonz:hover,  .buttonz:focus,{
+.buttonz:hover, .buttonz:focus,{
   color: #144491;
   font-weight: 700;
   background-color: #FFF;
@@ -262,6 +262,19 @@ input[type=password], select {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font-weight: 600;
+}
+
+.pro-pro-1 {
+  display: relative;
+  float: left;
+}
+
+.pro-pro-2 {
+  display: relative;
+  float: left;
+  margin-left: 60px;
+  padding: 20px 50px 100px 20px;
+
 }
 
 #map {

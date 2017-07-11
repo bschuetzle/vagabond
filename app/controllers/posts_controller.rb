@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     # @posts = Post.all
     location_id = params[:location_id]
@@ -56,6 +57,7 @@ class PostsController < ApplicationController
   end
 
   private
+  
   def post_params
     params.require(:post).permit(:title, :body)
   end

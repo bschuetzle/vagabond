@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   before_action :current_user
 
   def index
@@ -35,7 +36,6 @@ class UsersController < ApplicationController
     user.destroy
     redirect_to root_path
   end
-
 
   def show
     @user = User.friendly.find(params[:id])
