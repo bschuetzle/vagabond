@@ -1,13 +1,11 @@
 <div class="container">
   <h1>Edit <%=  @location.city %>'s Information </h1>
-  <%= form_for @location do |f| %>
+  <%= form_for @location, :html => {:class => 'form_for'} do |f| %>
     City: <%= f.text_field :city %>
     State: <%= f.text_field :state %>
     Country: <%= f.text_field :country %>
     Region: <%= f.text_field :region %>
-    Latitude: <%= f.text_field :lat %>
-    Longitude: <%= f.text_field :long %>
     Image: <%= f.file_field :photo %>
-    <%= f.submit "Save Changes", class: 'buttonz' %>
+    <%= f.submit "Save Changes", class: 'default_button' %>
   <% end %>
 </div>

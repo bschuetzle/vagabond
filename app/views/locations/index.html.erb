@@ -4,9 +4,16 @@
     <% @locations.each do |location| %>
     <div class="loc_loc">
       <h4> <%= link_to(location) do %>
-      <%= location.city %>
+        <%= location.city %>
+        <% end %>
+      </h4>
+
+      <% if current_user.name === "Bill Schuetzle" || current_user.name === "Justin McDavid" || current_user.name === "Cindy Le" %>
+        <%= link_to edit_location_path(location) do %>
+          <i class="glyphicon glyphicon-pencil"></i>
+        <% end %>
       <% end %>
-    </h4>
+    
     </div>
     <% end %>
   </div>
