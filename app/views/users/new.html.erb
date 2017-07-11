@@ -1,6 +1,6 @@
 <div class="container">
   Fill Out Your Profile
-  <%= form_for :user, url: "/users", method: "post" do |f| %>
+  <%= form_for :user, url: "/users", method: "post", :html => {:class => 'form_for'} do |f| %>
     <%= f.text_field :name, placeholder: "Name" %>
     <%= f.text_field :current_location, placeholder: "Current Location" %>
     <%= f.text_field :email, placeholder: "Email" %>

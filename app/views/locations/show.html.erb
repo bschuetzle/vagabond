@@ -3,6 +3,8 @@
   <h1 class="city_name"><%= @location.city %></h1>
   <% if @location.photo_file_name != nil %> <br>
   <%= image_tag(@location.photo.url(:original), class: 'media-object city_image') %>
+  <% else %>
+  <%= image_tag("generic_city_background.jpg", class: 'media-object city_image') %>
   <% end %>
 </div>
 
@@ -21,4 +23,3 @@
   </div>
   <% end %>
 </div>
-
