@@ -8,5 +8,7 @@
     <%= @post.body %> <br>
   <%= button_to "Delete this Post", location_post_path(@post.location_id), method: :delete, data: {confirm: 'Are you sure?' }, class: 'buttonz' %>
   <%= button_to "Edit this Post", edit_location_post_path(@post.location_id), method: :get, class: 'buttonz' %>
+  <%= link_to "Back", location_path(@post.location) %>
   </div>
+
 </div>
