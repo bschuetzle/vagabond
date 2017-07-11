@@ -18,6 +18,16 @@ body {
   background-color: #F1F1F1;
 }
 
+.form {
+  // margin-top: 100px;
+}
+
+.form_header_text {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .navbar-brand {
   font-family: 'Permanent Marker', sans-serif;
   font-size: 25px;
@@ -29,6 +39,10 @@ body {
 
 .navbar-default .navbar-link:hover {
   color: rgb(204,59,0);
+}
+
+.flash_msg {
+  margin-top: 100px;
 }
 
 .loc_comment, .post_post, .user_popo, .single_popo {
@@ -115,7 +129,6 @@ form {
 
 .buttonz {
   color: #FFF;
-
   background-color: #144491;
   padding: 5px 10px;
   border: 2px solid #144491;

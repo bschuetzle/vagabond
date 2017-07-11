@@ -17,11 +17,18 @@
 <body>
   <%= render 'nav/header' %>
 
-  <% flash.each do |name, msg| %>
-  <p>
-    <small> <%= name.capitalize %>: <%= msg %> </small>
-  </p>
-  <% end %>
+  <div class="container">
+    <div class="flash_msg">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+            <% if key == "danger" %>
+              <strong>Sorry, you got issues: </strong>
+            <% end %>
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
   <%= yield %>
 
