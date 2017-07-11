@@ -18,8 +18,9 @@ body {
   background-color: #F1F1F1;
 }
 
-.form {
-  // margin-top: 100px;
+.all_locations {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .form_header_text {
@@ -102,17 +103,32 @@ form {
 
 .default_button {
   display: block;
-  margin: 20px auto;
+  margin: 20px 0;
   background-color: rgba(255,255,255,0);
   color: black;
   border: 1px solid black;
   border-radius: 5px;
   width: 100px;
   height: 40px;
-
 }
 
 .default_button:hover {
+  color: rgb(204,59,0);
+  background-color: rgb(230, 230, 230)
+}
+
+.add_post {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+}
+
+.add_post:hover {
   color: rgb(204,59,0);
   background-color: rgb(230, 230, 230)
 }
