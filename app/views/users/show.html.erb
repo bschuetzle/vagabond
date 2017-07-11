@@ -8,7 +8,18 @@
       <p class="user_info">Current Location: <%= @user.current_location %></p>
       <p class="user_info">Email: <%= @user.email %><br></p>
 
-      <%= button_to "Update Profile", edit_user_path, method: :get, class: 'default_button' %>
+    <%= image_tag(@user.photo.url(:profile), class: 'media-object profile_photo') %><br>
+    <p class="user_info"><%= @user.current_location %></p>
+    <p class="user_info"><%= @user.email %><br></p>
+
+    <%= button_to "Update Profile", edit_user_path, method: :get, class: 'default_button' %>
+
+    <div class="user_popo">
+      <h3 class="user_posts_heading">Your Posts</h4>
+      <% @posts.each do |post| %>
+        <p class="user_posts"><%= link_to post.created_at.strftime("%m/%d/%Y") + ': ' + post.title, location_post_path(post.location_id, post.id) %></p>
+      <% end %>
+    </div>
 
   </div>
   <div class="user_popo pro-pro-2">
