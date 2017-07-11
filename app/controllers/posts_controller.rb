@@ -38,13 +38,14 @@ class PostsController < ApplicationController
     location_id = params[:location_id]
     post = Post.friendly.find(params[:id])
     post.update_attributes(post_params)
-    redirect_to location_post_path
+    redirect_to location_path(location_id)
   end
 
   def destroy
+    location_id = params[:location_id]
     post = Post.friendly.find(params[:id])
     post.destroy
-    redirect_to location_posts_path
+    redirect_to location_path(location_id)
   end
 
   def show

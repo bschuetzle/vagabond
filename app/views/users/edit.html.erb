@@ -1,7 +1,7 @@
 
 <div class="container">
   <h1>Edit your profile</h1>
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :html => {:class => 'form_for'} do |f| %>
   Name: <%= f.text_field :name %> <br>
   Current Location:  <%= f.text_field :current_location %> <br>
   Email:  <%= f.text_field :email %> <br>
@@ -9,6 +9,6 @@
   <%= image_tag(@user.photo.url(:profile), class: 'media-object') %>
   <% end %>
   <%= f.file_field :photo %> <br>
-    <%= f.submit "Save Changes", class: 'buttonz' %>
+    <%= f.submit "Save Changes", class: 'default_button' %>
   <% end %>
 </div>

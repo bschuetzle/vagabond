@@ -18,6 +18,34 @@ body {
   background-color: #F1F1F1;
 }
 
+.all_locations {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.form_header_text {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 25px;
+}
+
+.navbar-default .navbar-link {
+  color: rgb(204,59,0);
+}
+
+.navbar-default .navbar-link:hover {
+  color: rgb(204,59,0);
+}
+
+.flash_msg {
+  padding-top: 100px;
+}
+
 .loc_comment, .post_post, .user_popo, .single_popo {
   margin: 20px 0;
   padding: 15px;
@@ -73,32 +101,93 @@ form {
   font-family: 'Lato', sans-serif;
 }
 
-.add_post_button {
+.profile_photo {
+  margin: 20px 0;
+}
+
+.user_info {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.user_posts_heading {
+  margin-bottom: 20px;
+}
+
+.user_posts {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.default_button {
+  display: block;
+  margin: 20px 0;
+  background-color: rgba(255,255,255,0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+}
+
+.default_button:hover {
+  color: rgb(204,59,0);
+  background-color: rgb(230, 230, 230)
+}
+
+.add_post {
   display: block;
   margin: 0 auto;
   background-color: rgba(255,255,255,0);
   color: black;
   border: 1px solid black;
   border-radius: 5px;
-  width: 100px;
+  width: 120px;
   height: 40px;
+}
+
+.add_post:hover {
+  color: rgb(204,59,0);
+  background-color: rgb(230, 230, 230)
+}
+
+.post_show_buttons_cont {
+  display: inline-block;
+}
+
+.post_show_buttons {
+  display: inline-block;
+  // margin: 20px 0;
+  background-color: rgba(255,255,255,0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+}
+
+.post_show_buttons:hover {
+  color: rgb(204,59,0);
+  background-color: rgb(230, 230, 230)
+}
+
+h4 .edit_location {
+  text-align: right;
+}
+
+.location_intro_cont {
   margin-bottom: 50px;
 }
 
-.add_post_button:hover {
-  background-color: rgba(255, 153, 0, 0.25);
-}
-
 .location_intro {
+  text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  text-align: center;
-  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .buttonz {
   color: #FFF;
-
   background-color: #144491;
   padding: 5px 10px;
   border: 2px solid #144491;
@@ -122,6 +211,8 @@ a:hover {
 
 .ahey {
   color: #144491;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
 }
 
 .ahey:hover {
@@ -159,4 +250,20 @@ input[type=password], select {
 
 .form_for {
   background-color: #F1F1F1;
+}
+
+.map_text_cont {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.map_text {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#map {
+  margin-bottom: 100px;
 }

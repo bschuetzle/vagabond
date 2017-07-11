@@ -1,12 +1,16 @@
+
 <div class="container">
-  <h1>Log-in to Vagrant</h1>
-  <%= form_for @user, url: "/sessions", method: "post" do |f| %>
-    <div>
-      <%= f.text_field :email, placeholder: "Email" %>
-    </div>
-    <div>
-      <%= f.password_field :password, placeholder: "Password" %>
-    </div>
-    <%= f.submit "Log In", class: 'buttonz' %>
-  <% end %>
+  <%= render 'shared/flash' %>
+  <div class="form">
+    <h1 class="form_header_text">Log In</h1>
+    <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+      <div>
+        <%= f.text_field :email, placeholder: "Email" %>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <%= f.submit "Log In", class: 'default_button' %>
+    <% end %>
+  </div>
 </div>

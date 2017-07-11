@@ -55,11 +55,19 @@
     </div>
 
     <div class="container">
+      <div class="map_text_cont">
+        <p class="map_text">We offer discount rail passes for many popular destinations across the globe, from <%= @first_location.city %> to <%= @last_location.city %></p>
+        <p class="map_text">Click on a city in the map to see posts from fellow adventurers like yourself!</p>
+      </div>
+    </div>
+
+    <div class="container">
       <%= content_tag :div, class: "locations_class", data: {locations: @locations} do %>
       <% end %>
-
       <div id="map"></div>
     </div>
+
+
     <script>
 
       function initMap() {

@@ -1,12 +1,20 @@
 <div class="container">
-  <h1>Posted Locations</h1>
+  <div class="all_locations">
+    <h1 class="form_header_text">All Cities</h1>
+    <% @locations.each do |location| %>
+    <div class="loc_loc">
+      <h4> <%= link_to(location) do %>
+        <%= location.city %>
+        <% end %>
+      </h4>
 
-  <% @locations.each do |location| %>
-  <div class="loc_loc">
-    <h4> <%= link_to(location) do %>
-    <%= location.city %>
+      <% if current_user.name === "Bill Schuetzle" || current_user.name === "Justin McDavid" || current_user.name === "Cindy Le" %>
+        <%= link_to edit_location_path(location) do %>
+          <i class="glyphicon glyphicon-pencil"></i>
+        <% end %>
+      <% end %>
+    
+    </div>
     <% end %>
-  </h4>
   </div>
-  <% end %>
 </div>

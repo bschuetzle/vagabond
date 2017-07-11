@@ -1,10 +1,14 @@
+
 <div class="container">
-  Fill Out Your Profile
-  <%= form_for :user, url: "/users", method: "post", :html => {:class => 'form_for'} do |f| %>
-    <%= f.text_field :name, placeholder: "Name" %>
-    <%= f.text_field :current_location, placeholder: "Current Location" %>
-    <%= f.text_field :email, placeholder: "Email" %>
-    <%= f.password_field :password, placeholder: "Password" %>
-    <%= f.submit "Save Your Profile", class: 'buttonz' %>
-  <% end %>
+  <%= render 'shared/flash' %>
+  <div class="form">
+    <h1 class="form_header_text">Sign Up</h1>
+    <%= form_for :user, url: "/users", method: "post", :html => {:class => 'form_for'} do |f| %>
+      <%= f.text_field :name, placeholder: "Name" %>
+      <%= f.text_field :current_location, placeholder: "Current Location" %>
+      <%= f.text_field :email, placeholder: "Email" %>
+      <%= f.password_field :password, placeholder: "Password" %>
+      <%= f.submit "Save", class: 'default_button' %>
+    <% end %>
+  </div>
 </div>
